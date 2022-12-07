@@ -89,3 +89,14 @@ img {
     max-width: 200px;
     height: 150px;
 }
+.pierre-clig
+{
+    animation-duration: 0.5;
+    animation-name: clignoter;
+    transition:none;
+}
+@keyframes clignoter {
+    0%   { opacity:1; }
+    40%   {opacity:0; }
+    100% { opacity:1; }
+  }

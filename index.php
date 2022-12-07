@@ -34,13 +34,13 @@
       </div>
 
       <div class="col-sm-12 d-flex justify-content-center col-md-2">
-        <div class="photos"><image class="pierre-clig" 
-              img src="../brief3/images/pierre.jpg" title="BONJOUR A VOUS">
+        <div class="photos">
+          <img src="../brief3/images/tete2.jpg" title="BONJOUR">
         </div>
       </div>
-      <div class="col-sm-12 d-flex justify-content-center col-md-4">
-        <div class="text-md-center"><br>
-          
+      <div class="col-sm-12 d-flex justify-content-center col-md-5">
+        <div class="text-md-center">
+          <br>
             <div class="text-secondary"> ACTUELLEMENT</div>
             <br>
             <div class="text-grey">
@@ -62,59 +62,72 @@
               <p>J’ai profité de mon retours en Lozere pour effectuer une reconvertion
               professionnelle dans le developpement web et web mobile.
               Par passion et curiosité au greta de Mende.</p>
-                <div class="bas">
-                Contactez moi :
-                <div class="frame2">
-                <div class="text-md-center">
+          <div class="bas">
+            Contactez moi :
+            <div class="frame2">
+              <div class="text-md-center">
                 <div class="text-dark">  06.84.54.21.50
                   <div class="text-dark">  04.66.32.66.91
                   <br>     
                   p-bvernhet@yahoo.fr
                 </div>
               </div>
-            </div>
-              
-            <div class="babas">
+            
+        <div class="babas">
           <img src="images/evol3.jpg" class="rounded-circle" alt="tuc" style="width:30%; height:50%">
         </div>
       </div>
-                
-  </div> </div>
+  </div> 
 
-  <top: 80%></top:>
-<div class="container">
-<form method="post" action="">
-   <div class="row center "></div>
-         <!-- <div class="col-md-2"></div>-->
-        
-        <div class="col-md-11">
+  <top: 75%></top:>
+  <div class="container">
+    <form method="post">
+      <div class="row">
+
+        <div class="col-md-6">
 
             <h3>Votre message</h3>
 
             <div class="form-group">
-                <input type="text" name="nom" class="form-control" placeholder="Votre nom *" value="" />
-            
-            <div class="form-group">
-                <input type="text" name="sujet" class="form-control" placeholder="Demande" value="" />
-            
-            <div class="form-group">
-                <input type="text" name="email" class="form-control" placeholder="Votre email *" value="" />
-
-                <div class="form-group">
-                <input type="text" name="phone" class="form-control" placeholder="Votre téléphone *" value="" />
-                        
-                <div class="form-group">
-                <textarea name="message" class="form-control" placeholder="Votre Message *" style="width: 100%; height: 150px;"></textarea>
-                        
-                <div class="form-group">
-                <input type="submit" name="envoyez" value="Envoyez" />
-                        
-                        
-                  
-                  
-              </div>
+                <input type="text" name="nom" class="form-control" placeholder="Ton nom *" value="" />
             </div>
-             
-</body>
+            <div class="form-group">
+                <input type="text" name="sujet" class="form-control" placeholder="Sujet" value="" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="Ton email *" value="" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="phone" class="form-control" placeholder="Ton téléphone *" value="" />
+            </div>
+            <div class="form-group">
+                <textarea name="message" class="form-control" placeholder="Ton Message *" style="width: 100%; height: 150px;"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="envoyez" value="Envoyez" />
+            </div>
+                          
+        </div>
+      </div>
+    </form>
+   
+   <?php
+      if(!empty($_POST["envoyez"]))
+      {
+        $nom = $_POST['nom'];
+        $email = $_POST['email'];
+        $sujet = $_POST['sujet'];
+        $message = $_POST['message'];
 
+        $toEmail = "pbvernhet@yahoo.fr";
+        $mailHeaders = "From: " . $nom . "<". $email ."\r\n";
+
+        if(mail($toEmail, $sujet, $message, $mailHeaders))
+        
+            $message = "Le formulaire à bien été envoyé.";
+        }
+    ?>
+
+    
+</body>
 </html>
