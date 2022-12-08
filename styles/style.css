@@ -38,6 +38,11 @@ h1
     padding: 15px 25px;
     border-radius: 10% / 50%;
   }
+  .bouton{
+    margin: auto;
+    padding: 15px 25px;text-align: center;
+  }
+
 .frame2 {
     width: 100%;
     height: 200px;
@@ -57,6 +62,16 @@ img {
     text-align: center;
     color:rgb(246, 14, 60) !important;
     margin-top: 20px;
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;}
+
+   @keyframes clignoter {
+    0%   { opacity:1; }
+    40%   {opacity:0; }
+    100% { opacity:1; }
+  }
 }
 .text-primary{
     color: rgb(14, 18, 132) !important;
@@ -71,7 +86,7 @@ img {
 }
 .droite{
     font-family: 'Poppins';
-    font-size: 20px;
+    font-size: 23px;
 }
 .bas{
     font-size: 32px;
@@ -79,25 +94,19 @@ img {
     margin-top: 20px;
 }
 .babas{
-    margin-top: 30px;
+    margin-top: 32px;
     text-align: center;
 }
 .photos{
     margin-top: 25px;
     text-align: center;
     display: flex;
-    max-width: 200px;
-    height: 150px;
+    max-width: 300px;
+    height: 350px;
 }
-.pierre-clig
-{
-    animation-duration: 0.5;
-    animation-name: clignoter;
-    transition:none;
+.xmlns{font-size: 32px;
+    text-align: center;
+    margin-top: 20px;
+   
 }
-@keyframes clignoter {
-    0%   { opacity:1; }
-    40%   {opacity:0; }
-    100% { opacity:1; }
-  }
-f
+
